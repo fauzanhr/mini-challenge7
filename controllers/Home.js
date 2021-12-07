@@ -1,9 +1,3 @@
-/**
- *  Home Controller
- * 
- * @author Grotius Cendikia Hasiholan <grotius.hasiholan@gmail.com>
- */
-
 var fs = require('fs');
 const { User, Product, Order, ProductCategory } = require('../models')
 

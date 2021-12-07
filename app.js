@@ -8,11 +8,14 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
 app.use(express.static(__dirname + '/public'))
 
+
 var user_session = {
     id: undefined
 }
 
 var homeRouter = require('./routers/home')
+var productRouter = require('./routers/products');
+app.use('/products', productRouter);
 homeRouter.params = user_session
 
 app.use('/', homeRouter)
